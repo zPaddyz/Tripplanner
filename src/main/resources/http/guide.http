@@ -1,0 +1,12 @@
+### Read All Guides
+GET {{url}}/guides/
+Authorization: Bearer {{jwt_token}}
+
+### Read a Guide by ID
+GET {{url}}/guides/3
+Authorization: Bearer {{jwt_token}}
+
+
+### Delete a Guide
+DELETE {{url}}/guides/3
+Authorization: Bearer {{jwt_token}}

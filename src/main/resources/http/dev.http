@@ -1,0 +1,55 @@
+### Create a Trip
+POST {{url}}/trips/
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+  "name": "Tur til søen",
+  "date": "2024-11-05",
+  "startTime": "10:00:00",
+  "endTime": "11:00:00",
+  "longitude": -122.4194,
+  "latitude": 37.7749,
+  "price": 100.0,
+  "category": "beach"
+}
+
+### Read All Trips
+GET {{url}}/trips/
+Authorization: Bearer {{jwt_token}}
+
+### Read a Trip by ID
+GET {{url}}/trips/2
+Authorization: Bearer {{jwt_token}}
+
+### Update a Trip
+PUT {{url}}/trips/1
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+  "name": "Spanien 2025",
+  "date": "2025-11-06",
+  "startTime": "10:30:00",
+  "endTime": "11:30:00",
+  "longitude": -122.4194,
+  "latitude": 37.7749,
+  "price": 120.0
+}
+
+### Delete a Trip
+DELETE {{url}}/trips/2
+Authorization: Bearer {{jwt_token}}
+
+### Add a Guide to a Trip
+PUT {{url}}/trips/3/guides/1
+Authorization: Bearer {{jwt_token}}
+
+### Populate the database with some data
+POST {{url}}/trips/populate
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+### Filter trips by category
+GET {{url}}/trips/filter/beach
+Authorization: Bearer {{jwt_token}}
